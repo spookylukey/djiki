@@ -15,6 +15,11 @@ def allow_anonymous_edits():
         return getattr(settings, 'DJIKI_ALLOW_ANONYMOUS_EDITS', True)
 
 
+def index(request):
+    return render(request, 'djiki/index.html',
+            {'pages': models.Page.objects.all()})
+
+
 def view(request, title, revision_pk=None):
     url_title = utils.urlize_title(title)
     if title != url_title:
