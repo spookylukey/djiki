@@ -138,3 +138,7 @@ fieldset {
 		padding: 0;
 		font-size: 80%;
 	}
+
+.djiki .clear {
+	clear: both;
+}
