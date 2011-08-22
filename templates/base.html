@@ -10,33 +10,33 @@ Feel free to replace it with anything you like.
 {% endcomment %}
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>{% block title %}Djiki{% endblock %}</title>
-	<link rel="stylesheet" type="text/css" href="https://github.com/nathansmith/960-Grid-System/raw/master/code/css/960.css" />
-	<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/styles.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{% block title %}Djiki{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="https://github.com/nathansmith/960-Grid-System/raw/master/code/css/960.css" />
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/styles.css" />
 </head>
 <body>
-	<div id="header" class="container_12">
-		<div class="grid_1">
-			<h1><a href="/"><span>Djiki</span></a></h1>
-		</div>
-		<div class="grid_11">
-			<p class="desc">— a Wiki engine for Django</p>
-		</div>
-	</div>
-	{% block messages %}
-	{% if messages %}
-	<div id="messages" class="container_12">
-		<div class="grid_12">
-			<ul>
-				{% for msg in messages %}
-				<li class="{{ msg.tags }}">{{ msg }}</li>
-				{% endfor %}
-			</ul>
-		</div>
-	</div>
-	{% endif %}
-	{% endblock %}
+    <div id="header" class="container_12">
+        <div class="grid_1">
+            <h1><a href="/"><span>Djiki</span></a></h1>
+        </div>
+        <div class="grid_11">
+            <p class="desc">— a Wiki engine for Django</p>
+        </div>
+    </div>
+    {% block messages %}
+    {% if messages %}
+    <div id="messages" class="container_12">
+        <div class="grid_12">
+            <ul>
+                {% for msg in messages %}
+                <li class="{{ msg.tags }}">{{ msg }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endif %}
+    {% endblock %}
 {% block page %}{% endblock %}
 {% block google-analytics %}
 {% if GOOGLE_ANALYTICS_ID %}
