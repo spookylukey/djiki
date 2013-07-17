@@ -7,7 +7,7 @@
         <h1>Pages</h1>
         <ul>
         {% for page in pages %}
-            <li><a href="{% url djiki-page-view page.title|urlize_title %}">{{ page.title }}</a></li>
+            <li><a href="{% url 'djiki-page-view' page.title|urlize_title %}">{{ page.title }}</a></li>
         {% endfor %}
         </ul>
 	</div>
